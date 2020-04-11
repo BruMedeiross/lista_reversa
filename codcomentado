@@ -1,0 +1,30 @@
+def lista_reversa():                                                    #função lista_reversa imprime a sequencia inversa, não em ordem
+    print ("Digite sua lista finalizando com zero(0).")              #instrução ao usuário
+    lista = []                                                          #lista está vazia
+    x = int(input("Digite um valor para a lista: "))                    #primeiro parametro da lista - digitado pelo usuário
+    lista.append (x)                                                    #lista que estava vazia passa a receber dados (x)
+    while x > 0:                                                        #enquanto x for maior que zero ...
+        x = int(input("Digite o próx valor para a lista: "))            #o usuário continua a inserir dados
+        if x >0:
+            lista.append (x)                                            #se for maior que zero o número sera inserido na lista
+        if x ==0:
+            lista.reverse()
+            return(lista)                                               #se for zero encerra o input e imprime a lista digitada ao contrario 
+    else:
+        lista.reverse()
+        return(lista)                                                   #se for zero encerra o input e imprime a lista digitada ao contrario
+        
+
+
+
+lista_reverse()
+
+#exemplo de execução: 
+Digite sua lista finalizando com zero(0). 
+Digite um valor para a lista: 44
+Digite o próx valor para a lista: 55
+Digite o próx valor para a lista: 4
+Digite o próx valor para a lista: 577
+Digite o próx valor para a lista: 88
+Digite o próx valor para a lista: 0
+[88, 577, 4, 55, 44]
